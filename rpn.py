@@ -3,10 +3,18 @@
 def calculate(arg):
 
     arr = arg.split()
-    print(arr)
-
-
-
+    st = []
+    for elt in arr:
+        if elt == '+':
+            result = 0
+            for i in range(len(st)):
+                result += st.pop()
+            st.append(result)
+        else:
+            st.append(int(elt))
+            
+    return st.pop()
+            
 def main():
     while True:
         calculate(input('rpn calc> '))
