@@ -5,11 +5,19 @@ def calculate(arg):
     arr = arg.split()
     st = []
     for elt in arr:
+        result = 0
+        
         if elt == '+':
-            result = 0
             for i in range(len(st)):
                 result += st.pop()
             st.append(result)
+            
+        elif elt == '-':
+            for i in range(len(st)-1):
+                result += st.pop()
+            first = st.pop()
+            st.append(first - result)
+             
         else:
             st.append(int(elt))
             

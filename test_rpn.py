@@ -15,7 +15,11 @@ class TestBasics(unittest.TestCase):
         self.assertEqual(-4,rpn.calculate('0 0 + 2 + -3 -1 + -2 +'))
         print('Passed add test')
 
+    def test_minus(self):
+        self.assertEqual(2, rpn.calculate('4 2 -'))
+
 if __name__ == '__main__':
 
     test = TestBasics()
     test.test_add()
+    test.test_minus()
