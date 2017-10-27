@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
 def calculate(arg):
-    pass
+
+    arr = arg.split()
+    print(arr)
 
 
 
