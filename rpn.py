@@ -1,10 +1,23 @@
 #!/usr/bin/env python3
 
+import sys
+
 def calculate(arg):
 
     arr = arg.split()
     st = []
+
+    debug = False
+    if len(sys.argv) > 1:
+        if sys.argv[1] == 'debug':
+            print('Debug is on')
+            debug = True
+	
     for elt in arr:
+
+        if debug == True:
+            print(st)
+	
         result = 0
         
         if elt == '+':
@@ -25,6 +38,9 @@ def calculate(arg):
             
         else:
             st.append(int(elt))
+
+    if debug == True:
+        print(st)
             
     return st.pop()
             
