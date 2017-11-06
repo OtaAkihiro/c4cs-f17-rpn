@@ -17,6 +17,11 @@ class TestBasics(unittest.TestCase):
 
     def test_minus(self):
         self.assertEqual(2, rpn.calculate('4 2 -'))
+        print('Passed minus test')
+
+    def test_exp(self):
+        self.assertEqual(4, rpn.calculate('2 2 ^'))
+        self.assertEqual(8, rpn.calculate('2 3 ^'))
 
 if __name__ == '__main__':
 
