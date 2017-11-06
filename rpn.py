@@ -17,6 +17,11 @@ def calculate(arg):
                 result += st.pop()
             first = st.pop()
             st.append(first - result)
+	
+        elif elt == '^':
+            power = st.pop()
+            base = st.pop()
+            st.append(base**power)
              
         else:
             st.append(int(elt))

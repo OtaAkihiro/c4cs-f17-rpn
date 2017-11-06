@@ -22,9 +22,11 @@ class TestBasics(unittest.TestCase):
     def test_exp(self):
         self.assertEqual(4, rpn.calculate('2 2 ^'))
         self.assertEqual(8, rpn.calculate('2 3 ^'))
+        print('Passed exp test')
 
 if __name__ == '__main__':
 
     test = TestBasics()
     test.test_add()
     test.test_minus()
+    test.test_exp()
