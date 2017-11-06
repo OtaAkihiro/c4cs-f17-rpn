@@ -22,6 +22,7 @@ def calculate(arg):
             power = st.pop()
             base = st.pop()
             st.append(base**power)
+
        
         elif elt == '/':
             lower = st.pop()
