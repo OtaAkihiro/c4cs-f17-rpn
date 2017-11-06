@@ -22,12 +22,6 @@ def calculate(arg):
             power = st.pop()
             base = st.pop()
             st.append(base**power)
-
-       
-        elif elt == '/':
-            lower = st.pop()
-            upper = st.pop()
-            st.append(upper/lower)
             
         else:
             st.append(int(elt))
