@@ -25,9 +25,14 @@ class TestBasics(unittest.TestCase):
         self.assertEqual(8, rpn.calculate('2 3 ^'))
         print('Passed exp test')
 
+    def test_div(self):
+        self.assertEqual(6, rpn.calculate('12 2 /'))
+        self.assertEqual(8, rpn.calculate('16 2 /'))
+
 if __name__ == '__main__':
 
     test = TestBasics()
     test.test_add()
     test.test_minus()
     test.test_exp()
+    test.test_div()
