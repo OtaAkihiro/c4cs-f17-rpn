@@ -28,6 +28,7 @@ class TestBasics(unittest.TestCase):
     def test_div(self):
         self.assertEqual(6, rpn.calculate('12 2 /'))
         self.assertEqual(8, rpn.calculate('16 2 /'))
+        self.assertEqual(1, rpn.calculate('12 4 / 3 /'))
 
 if __name__ == '__main__':
 
