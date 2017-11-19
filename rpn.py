@@ -35,6 +35,11 @@ def calculate(arg):
             power = st.pop()
             base = st.pop()
             st.append(base**power)
+
+        elif elt == '/':
+            bottom = st.pop()
+            top = st.pop()
+            st.append(top/bottom)
             
         else:
             st.append(int(elt))
